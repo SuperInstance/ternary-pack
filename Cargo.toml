@@ -1,0 +1,9 @@
+[package]
+name = "ternary-pack"
+version = "0.1.0"
+edition = "2021"
+description = "Experimental bit-packing of ternary {-1,0,+1} values for GPU memory efficiency. Tests 2-bit packing, XNOR+popcount matmul, and SIMD lane mapping."
+license = "Apache-2.0"
+repository = "https://github.com/SuperInstance/ternary-pack"
+keywords = ["ternary", "gpu", "bit-packing", "simd", "pack"]
+categories = ["algorithms", "hardware-support"]
