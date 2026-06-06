@@ -1,43 +1,30 @@
-# PLUG_AND_PLAY — ternary-pack
+# PLUG_AND_PLAY — Pack
 
-> *Integration guide for incorporating ternary-pack into your SuperInstance fleet setup.*
+> Efficient packing/mining of ternary values
 
-## Dependency
+## 🚀 Quick Start
+
+Add to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-ternary_pack = "0.1.0"
+ternary-pack = { git = "https://github.com/SuperInstance/ternary-pack" }
 ```
 
-## Feature Flags
-
-| Feature | Default | Description |
-|---------|---------|-------------|
-| `std` | yes | Standard library support |
-| `alloc` | yes | Allocator support (for no_std) |
-
-## Integration Patterns
-
-### Basic Usage
+Use in your code:
 
 ```rust
-use ternary_pack::*;
+use ternary_pack::{PackedTrits, Trit};
+
+let mut packed = PackedTrits::new(1024);
+packed.set(0, Trit::Pos);
+packed.set(1, Trit::Neg);
 ```
 
-### With the Ternary Ecosystem
+## 🔗 Integration
 
-This crate works naturally with:
-- [ternary-core](https://github.com/SuperInstance/ternary-core) for Z₃ arithmetic
-- [ternary-types](https://github.com/SuperInstance/ternary-types) for type-level encodings
+This crate is part of the [SuperInstance ternary fleet](https://github.com/SuperInstance). It uses the canonical `Ternary` type from `ternary-types` for cross-crate compatibility.
 
-## Configuration
+## 📄 License
 
-ternary-pack requires minimal configuration. Where configuration is needed:
-- No runtime configuration files needed — pure library
-- Feature gates control optional dependencies
-
-## Compatibility
-
-- **Rust edition**: 2021+
-- **Targets**: All tier-1 Rust targets (x86_64, aarch64, ARM Cortex)
-- **no_std**: Not applicable
+MIT
