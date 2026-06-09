@@ -7,6 +7,3 @@ license = "Apache-2.0"
 repository = "https://github.com/SuperInstance/ternary-pack"
 keywords = ["ternary", "gpu", "bit-packing", "simd", "pack"]
 categories = ["algorithms", "hardware-support"]
-
-[dependencies]
-ternary-types = { git = "https://github.com/SuperInstance/ternary-types.git", features = ["std"] }
